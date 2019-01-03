@@ -1,5 +1,5 @@
 // vue.config.js
 module.exports = {
     // options...
-    outputDir: 'src/main/resources/static'
+    outputDir: '../src/main/resources/static'
   }
