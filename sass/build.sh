@@ -1,0 +1,1 @@
+sass --no-source-map=none main.scss:../frontend/public/css/main.css  

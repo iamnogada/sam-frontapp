@@ -59,6 +59,19 @@
 				<version>1.6.0</version>
 				<executions>
 					<execution>
+						<id>frontend-install</id>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<phase>prepare-package</phase>
+						<configuration>
+							<executable>yarn</executable>
+							<arguments>
+								<argument>install</argument>
+							</arguments>
+						</configuration>
+					</execution>
+					<execution>
 						<id>frontend-build</id>
 						<goals>
 							<goal>exec</goal>

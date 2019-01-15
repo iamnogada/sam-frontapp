@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/debug.css"> -->
+    <title>Sam-App</title>
+    <style>
+        .main-hero {
+            background: url(img/hero.png) center / cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    <img src="img/nogada-logo.png" alt="">
+                </a>
+                <a class="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="navbarMenu">
+                <div class="navbar-start">
+                    <a class="navbar-item">Category</a>
+                    <a class="navbar-item">Brands</a>
+                    <a class="navbar-item">Support</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item">Sign In</a>
+                    <a class="navbar-item">Sign-Up</a>
+                </div>
+            </div>
+        </nav>
+        <section class="hero is-medium main-hero">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Primary title
+                        </h1>
+                        <h2 class="subtitle">
+                            Primary subtitle
+                        </h2>
+                    </div>
+                </div>
+            </section>
+    </div>
+    <div class="container">
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length <= 0) return;
+            $navbarBurgers.forEach(element => {
+                element.addEventListener('click', () => {
+                    const $target = document.getElementById(element.dataset.target);
+                    element.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
